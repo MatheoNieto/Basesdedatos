@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bases de datos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link type="text/css" href="asstes/libs/animate.css/animate.css" rel="stylesheet">
+    <link type="text/css" href="asstes/libs/hover.css/css/hover.css" rel="stylesheet">
+    <link type="text/css" href="asstes/libs/sweetalert2/dist/sweetalert2.css" rel="stylesheet">
+    <link type="text/css" href="asstes/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 5vh;">
+        <h2 class="text-center" style="margin:10px">Bases de datos</h2>
+        <div class="col-md-2 col-sm-2 col-xs-2"></div>
+        <div class="col-md-8 col-sm-8 col-xs-8">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-8 col-sm-8 col-xs-8"></div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <form action="">
+                        <div class="input-group">
+                            <input id="gosearch" type="text" class="form-control" placeholder="Buscar..." name="search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-8 col-sm-8 col-xs-8"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <a href="#" id="btnFiltro" class="text-center" style="margin-left: 15px">Filtros</a>
+                    </div>
+                </div>
+                <div id="contenFiltro" class="col-md-12 col-sm-12 col-xs-12" style="padding: 0">
+                    <hr>
+                    <div class="col-md-10 col-sm-10 col-xs-10" style="padding: 0">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <select name="" id="slectionfacul" class="form-control">
+                                    <option>Todas las anteriores</option>
+                                    <option>Multidiciplinar</option>
+                                    <option>Facultad de Arquitectura y Diseño</option>
+                                    <option>Facultad Ciencias Humanas, Sociales y de la Educación</option>
+                                    <option>Facultad Ciencias Económicas y Administrativas</option>
+                                    <option>Facultad Ciencias Básicas e Ingeniería</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <select name="" id="tiposucri" class="form-control">
+                                    <option>Todas las anteriores</option>
+                                    <option>Suscrita</option>
+                                    <option>Libre acceso</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button id="btnsearfilt" class="btn btn-info">Buscar</button>
+                    </div>
+                </div>
+                <div id="paginacion_abecedario" class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;margin-top: 10px">
+                    <nav>
+                        <ul id="nvpagination" class="pagination">
+                            <li><a href="#">A</a></li>
+                            <li><a href="#">B</a></li>
+                            <li><a href="#">C</a></li>
+                            <li><a href="#">D</a></li>
+                            <li><a href="#">E</a></li>
+                            <li><a href="#">F</a></li>
+                            <li><a href="#">G</a></li>
+                            <li><a href="#">H</a></li>
+                            <li><a href="#">I</a></li>
+                            <li><a href="#">J</a></li>
+                            <li><a href="#">K</a></li>
+                            <li><a href="#">L</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">N</a></li>
+                            <li><a href="#">O</a></li>
+                            <li><a href="#">P</a></li>
+                            <li><a href="#">Q</a></li>
+                            <li><a href="#">R</a></li>
+                            <li><a href="#">S</a></li>
+                            <li><a href="#">T</a></li>
+                            <li><a href="#">U</a></li>
+                            <li><a href="#">V</a></li>
+                            <li><a href="#">W</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Y</a></li>
+                            <li><a href="#">Z</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p id="infocantidad"></p>
+                </div>
+
+
+
+            </div>
+
+            <div id="multi" class="col-md-12 col-sm-12 col-xs-12" style="margin-top:15px">
+
+            </div>
+        </div>
+    </div>
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="asstes/libs/sweetalert2/dist/sweetalert2.js"></script>
+    <!-- <script defer type="text/javascript" src="asstes/js/jquery.quicksearch.js"></script> -->
+    <script defer type="text/javascript" src="asstes/js/createToltip.js"></script>
+    <script defer type="text/javascript" src="asstes/js/datos.js"></script>
+    <script defer type="text/javascript" src="asstes/js/renderItem.js"></script>
+    <script defer type="text/javascript" src="asstes/js/renderizar.js"></script>
+    <script defer type="text/javascript" src="asstes/js/eventoPagination.js"></script>
+    <script defer type="text/javascript" src="asstes/js/search.js"></script>
+    <script defer type="text/javascript" src="asstes/js/filtro.js"></script>
+    <script defer type="text/javascript" src="asstes/js/script.js"></script>
+
+</body>
+
+</html>
